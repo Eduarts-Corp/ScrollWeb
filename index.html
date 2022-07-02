@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Estilos de Booststrap  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- Estilos de iconos de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <title> Scroll Web</title>
+</head>
+<!-- Este Ejercicio si lo vemos todo esta en la pagina de Bootstrap facilmente aplicable, Recordar poner los Scripts para que
+    todo funcione de manera correcta. -->
+
+<body style="position: relative;"
+      data-bs-spy="scroll"
+      data-bs-target="#navbar-example3"
+      data-bs-offset="0"
+      tabindex="10">
+
+    <!--////////////////// NAVBAR /////////////////////////// -->
+    <!-- para que el menu o barra de nav se quede pegado en la parte superior es con el fixed-top -->
+    <nav id="navbar-example3" class="navbar navbar-expand-lg navbar-dark bg bg-dark fixed-top">
+        <div class="container">
+            <a href="/" class="navbar-brand">
+                <i class="bi bi-bootstrap-fill align-middle"></i>
+                <span class="align-middle">Bootstrap</span>
+            </a>
+            <!-- Con Este boton vamos a ver el menu de barras cuando este por debajo de lo mas peque hasta 992px  -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Ahora vamos a hacer el menu que se colapsa en pantallas peque y sale en pantallas lg asi: -->
+            <!-- En el ul tenemos un ms-auto que quiere decir margin start- auto entonces al agrandar lo pasa a la derecha -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <!-- Aqui vemos que tenemos los #Id de cada sección entonces los tomamos en cada sección y los ponemos -->
+                        <a href="#inicio" class="nav-link active" aria-current="page">
+                            Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#servicios" class="nav-link" aria-current="page">
+                            Servicios
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#comentarios" class="nav-link" aria-current="page">
+                            Comentarios
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#suscribete" class="nav-link" aria-current="page">
+                            Suscribete
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- //////////////// SLIDER ////////////////////// -->
+    <section id="inicio">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+
+            <!-- Esta parte es para los indicadores de paso de imagen las 3 barritas -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+
+            <!-- Esta parte es la de las imagenes donde automaticamnete vana  pasar de una a otra -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <!-- El div que viene debajo de las imagenes es para ponerles texto a esas imagenes y ese d-md block es el responsive-->
+                    <img src="/img/img-2.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <!-- El div que viene debajo de las imagenes es para ponerles texto a esas imagenes -->
+                    <img src="/img/img-3.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <!-- El div que viene debajo de las imagenes es para ponerles texto a esas imagenes -->
+                    <img src="/img/img-4.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Esta parte es la de los controles o botones de flecha para pasar de una imagen a otra -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- SECCION PRINCIPAL O MAIN -->
+    <!-- aca el id servicios lo habiamos config en el navbar para que cuando lo opriman alla nos traiga a esta seccion -->
+    <main class="bg-dark text-white py-5" id="servicios">
+        <div class="container">
+            <div class="text-center py-5 text-primary h2">
+                <i class="bi bi-star-fill px-2"></i>
+                <i class="bi bi-star-fill px-2"></i>
+                <i class="bi bi-star-fill px-2"></i>
+                <i class="bi bi-star-fill px-2"></i>
+                <i class="bi bi-star-fill px-2"></i>
+            </div>
+            <h3 class="text-center display-4 mb-4 fw-bolder"> Nuestros Servicios</h3>
+            <!-- Recordemos que para hacer nuestro sistemas de columnas vamos a necesitar que tener un row dentro de un container-->
+            
+            <!-- Vamos a hacer el sistema de columnas aqui en el row ponemos el alig-items-center para alinear la img y el texto de las columnas -->
+            <div class="row alig-items-center">
+                <div class="col-12 col-lg-4">
+                    <h5>Lorem ipsum dolor sit amet.</h5>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi soluta perferendis quidem
+                        accusamus fugit qui, modi ducimus magnam deserunt? Voluptate ducimus accusamus maxime dolorem
+                        eos. Ducimus enim dicta omnis quisquam minima numquam debitis, necessitatibus tenetur ut
+                        veritatis, quasi aut harum ipsum exercitationem quas perspiciatis voluptate vero voluptatum
+                        dolorem quis tempore?</p>
+
+                    <button class="btn btn-outline-light mb-5 mb-lg-0">
+                        Suscribete!
+                    </button>
+                </div>
+
+                <!-- la clase img-fluid se debe poner para que no se desborde la imagen y para darle bordes redondos le decimos rounded -->
+                <div class="col-12 col-lg-8">
+                    <img src="/img/img-5.jpg" alt="" class="img-fluid rounded">
+                </div>
+            <h1 class="py-5 display-6">
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore rerum minus ducimus voluptates autem
+                quod beatae, optio pariatur harum accusamus quam. Et modi beatae expedita officia suscipit consectetur
+                in consequatur!"
+            </h1>
+        </div>
+
+    <!-- SECCION DE COMENTARIOS -->
+    <section id="comentarios" class="py-5 bg-light">
+        <div class="container text-dark">
+            <div class="text-center py-5 text-danger h2">
+                <i class="bi bi-chat-right-text px-3"></i>
+                <i class="bi bi-chat-right-text px-3"></i>
+                <i class="bi bi-chat-right-text px-3"></i>
+            </div>
+            <h2 class="text-center mb-5 display-4 fw-bolder">Comentarios</h2>
+            <p class="lead mb-5 text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nostrum aliquam reiciendis inventore itaque est ratione ab delectus. Magni dolorum quis illo molestiae amet alias aliquid dolores maiores illum omnis?</p>
+
+            <!-- Aqui como se puede observar esta las class col divididas y si arriba esta md -6 abajo igual si esta lg-4 abajo debe ser lg-8 para que de 12 -->
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-5 mb-md-0">
+                    <img src="/img/img-6.jpg"  class="img-fluid rounded" alt="">
+                </div>
+    <!--///////// ACORDEON BODY ES LA OTRA PARTE QUE TRAEREMOS PARA EL EJERCICIO /////////////////  -->
+                <!-- Aca vamos a tener la otra parte que es el acordeon -->
+                <div class="col-12 col-md-6 col-lg-8 col-xl-9">
+                    <!-- Aqui Efectivamente tenemos Lo que es el acordeon  -->
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button"
+                                        type="button" 
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" 
+                                        aria-expanded="true" 
+                                        aria-controls="collapseOne">
+                                    1. Servicios Generales. 
+                                </button>
+                            </h2>
+                            <div id="collapseOne" 
+                                 class="accordion-collapse collapse show" 
+                                 aria-labelledby="headingOne"
+                                 data-bs-parent="#accordionExample">
+                                
+                                 <div class="accordion-body">
+                                    <strong>This is the first item's accordion body.</strong> It is shown by default,
+                                    until the collapse plugin adds the appropriate classes that we use to style each
+                                    element. These classes control the overall appearance, as well as the showing and
+                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                    our default variables. It's also worth noting that just about any HTML can go within
+                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo"
+                                        aria-expanded="false" 
+                                        aria-controls="collapseTwo">
+                                    2. Servicios De Oficina.
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" 
+                                 class="accordion-collapse collapse"
+                                 aria-labelledby="headingTwo"
+                                 data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>This is the second item's accordion body.</strong> It is hidden by default,
+                                    until the collapse plugin adds the appropriate classes that we use to style each
+                                    element. These classes control the overall appearance, as well as the showing and
+                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                    our default variables. It's also worth noting that just about any HTML can go within
+                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" 
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" 
+                                        aria-expanded="false" aria-controls="collapseThree">
+                                    3. Servicios De Construcción.
+                                </button>
+                            </h2>
+                            <div id="collapseThree"
+                                 class="accordion-collapse collapse"
+                                 aria-labelledby="headingThree"
+                                 data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>This is the third item's accordion body.</strong> It is hidden by default,
+                                    until the collapse plugin adds the appropriate classes that we use to style each
+                                    element. These classes control the overall appearance, as well as the showing and
+                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                    our default variables. It's also worth noting that just about any HTML can go within
+                                    the <code>.accordion-body</code>, though the transition does limit overflow.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  <!-- <<<<<<<<<<<<< ACA VAMOS A HACER LA SECCION DE LAS CARDS -->
+    <section id="suscribete" class="py-5 bg-black">
+        <div class="container text-white ">
+            <div class="text-center py-5 text-primary h2 ">
+             <i class="bi bi-credit-card mx-2"></i>
+             <i class="bi bi-credit-card mx-2"></i>
+             <i class="bi bi-credit-card mx-2"></i>
+            </div>
+            <h2 class="text-center mb-5 display-4 fw-bolder">Suscribete Ahora!!!</h2>
+            <p class="lead mb-5 text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod nostrum
+                aliquam reiciendis inventore itaque est ratione ab delectus. Magni dolorum quis illo molestiae amet
+                alias aliquid dolores maiores illum omnis?</p>
+            <div class="row text-center text-dark">
+                <div class="col-12 col-md-4 mb-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="my-5 fs-1 fw-bolder text-danger">$100</h2>
+                        </div>
+                        <ul class="list-group list-group-flush text-center">
+                            <li class="list-group-item">1. Primer Descuento</li>
+                            <li class="list-group-item">2. Segundo Descuento</li>
+                            <li class="list-group-item">3. Tercer Descuento</li>
+                        </ul>
+                        <div class="card-body mb-3">
+                            <button type="button"
+                             class="btn btn-danger"
+                             data-bs-toggle="modal"
+                             data-bs-target="#exampleModal1">
+                                Suscribirme.
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="my-5 fs-1 fw-bolder text-danger">$300</h2>
+                        </div>
+                        <ul class="list-group list-group-flush text-center">
+                            <li class="list-group-item">1. Primer Descuento</li>
+                            <li class="list-group-item">2. Segundo Descuento</li>
+                            <li class="list-group-item">3. Tercer Descuento</li>
+                        </ul>
+                        <div class="card-body mb-3">
+                            <button type="button"
+                                    class="btn btn-danger"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal2">
+                                Suscribirme.
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="my-5 fs-1 fw-bolder text-danger">$500</h2>
+                        </div>
+                        <ul class="list-group list-group-flush text-center">
+                            <li class="list-group-item">1. Primer Descuento</li>
+                            <li class="list-group-item">2. Segundo Descuento</li>
+                            <li class="list-group-item">3. Tercer Descuento</li>
+                        </ul>
+                        <div class="card-body mb-3">
+                            <button type="button"
+                                    class="btn btn-danger"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal3">
+                                Suscribirme.
+                            </button>
+                        </div>
+                    </div>
+                </div>               
+            </div>
+    </section>
+
+    <!-- ACA PONDREMOS LOS MODALES. NO IMPORTA EL SITIO DE ESTOS PUEDEN ESTAR EN CUALUIER PARTE DE LA PAG WEB -->
+
+    <!-- MODAL 1 -->
+    <div class="modal fade" 
+         id="exampleModal1" 
+         tabindex="-1" 
+         aria-labelledby="exampleModalLabel1"
+         aria-hidden="true">
+        
+         <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-dark" id="exampleModalLabel1">Vas a dejar Pasar esta Oferta?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Abortar</button>
+                    <button type="button" class="btn btn-primary">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 2 -->
+
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-dark" id="exampleModalLabel2">Vas a dejar Pasar esta Oferta?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Abortar</button>
+                    <button type="button" class="btn btn-primary">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 3 -->
+
+    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-dark" id="exampleModalLabel3">Vas a dejar Pasar esta Oferta?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Abortar</button>
+                    <button type="button" class="btn btn-primary">Comprar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer
+        class="container-fluid bg-warning pt-3 text-center text-dark border border-secondary p-2 mb-2 border-opacity-10 ">
+        <i class="bi bi-wrench-adjustable-circle"></i>
+         <span class="align-middle">Todos Los Derechos Reservados 2022</span>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+    </script>
+    <script>
+        const myModal = document.getElementById('myModal')
+        const myInput = document.getElementById('myInput')
+
+        myModal.addEventListener('shown.bs.modal', () => {
+        myInput.focus()
+        })
+    </script>
+
+    
+</body>
+
+</html>
+
